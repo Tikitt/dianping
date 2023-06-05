@@ -4,11 +4,35 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a9a535ed-a574-4282-b674-9d3c6d380837" name="Changes" comment="黑马点评初始代码" />
+    <list default="true" id="a9a535ed-a574-4282-b674-9d3c6d380837" name="Changes" comment="黑马点评初始代码">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/st/entity/RedisData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/st/controller/ShopController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/st/controller/ShopController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/st/controller/ShopTypeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/st/controller/ShopTypeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/st/mapper/ShopTypeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/st/mapper/ShopTypeMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/st/service/IShopService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/st/service/IShopService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/st/service/IShopTypeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/st/service/IShopTypeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/st/service/impl/ShopServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/st/service/impl/ShopServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/st/service/impl/ShopTypeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/st/service/impl/ShopTypeServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/st/controller/ShopController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/st/controller/ShopController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/st/controller/ShopTypeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/st/controller/ShopTypeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/st/mapper/ShopTypeMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/st/mapper/ShopTypeMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/st/service/IShopService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/st/service/IShopService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/st/service/IShopTypeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/st/service/IShopTypeService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/st/service/impl/ShopServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/st/service/impl/ShopServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/st/service/impl/ShopTypeServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/st/service/impl/ShopTypeServiceImpl.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -48,6 +72,7 @@
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "F:/stStudy/JavaProjects/dianping",
     "settings.editor.selected.configurable": "MavenSettings",
+    "spring.configuration.checksum": "4389a84bcc0f18bc760150e6e378da4a",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -69,7 +94,16 @@
       <option name="presentableId" value="Default" />
       <updated>1685697333971</updated>
       <workItem from="1685697335950" duration="1227000" />
+      <workItem from="1685698593473" duration="8334000" />
     </task>
+    <task id="LOCAL-00001" summary="黑马点评初始代码">
+      <created>1685698672040</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1685698672040</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
