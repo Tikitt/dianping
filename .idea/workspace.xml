@@ -4,23 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a9a535ed-a574-4282-b674-9d3c6d380837" name="Changes" comment="黑马点评初始代码">
+    <list default="true" id="a9a535ed-a574-4282-b674-9d3c6d380837" name="Changes" comment="缓存更新策略+缓存穿透（互斥锁）实现">
       <change afterPath="$PROJECT_DIR$/src/main/java/com/st/entity/RedisData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/st/controller/ShopController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/st/controller/ShopController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/st/controller/ShopTypeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/st/controller/ShopTypeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/st/mapper/ShopTypeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/st/mapper/ShopTypeMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/st/service/IShopService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/st/service/IShopService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/st/service/IShopTypeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/st/service/IShopTypeService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/st/service/impl/ShopServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/st/service/impl/ShopServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/st/service/impl/ShopTypeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/st/service/impl/ShopTypeServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/st/controller/ShopController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/st/controller/ShopController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/st/controller/ShopTypeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/st/controller/ShopTypeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/st/mapper/ShopTypeMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/st/mapper/ShopTypeMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/st/service/IShopService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/st/service/IShopService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/st/service/IShopTypeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/st/service/IShopTypeService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/st/HmDianPingApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/st/HmDianPingApplicationTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/st/service/impl/ShopServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/st/service/impl/ShopServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/st/service/impl/ShopTypeServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/st/service/impl/ShopTypeServiceImpl.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +65,23 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Spring Boot.HmDianPingApplication">
+    <configuration name="HmDianPingApplicationTests.testSaveShop" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="hm-dianping" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.st.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.st" />
+      <option name="MAIN_CLASS_NAME" value="com.st.HmDianPingApplicationTests" />
+      <option name="METHOD_NAME" value="testSaveShop" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="HmDianPingApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="hm-dianping" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.st.HmDianPingApplication" />
@@ -84,6 +89,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.HmDianPingApplicationTests.testSaveShop" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -94,7 +104,7 @@
       <option name="presentableId" value="Default" />
       <updated>1685697333971</updated>
       <workItem from="1685697335950" duration="1227000" />
-      <workItem from="1685698593473" duration="8334000" />
+      <workItem from="1685698593473" duration="11357000" />
     </task>
     <task id="LOCAL-00001" summary="黑马点评初始代码">
       <created>1685698672040</created>
@@ -103,7 +113,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685698672040</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="缓存更新策略+缓存穿透（互斥锁）实现">
+      <created>1685951318673</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1685951318673</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -122,6 +139,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="黑马点评初始代码" />
-    <option name="LAST_COMMIT_MESSAGE" value="黑马点评初始代码" />
+    <MESSAGE value="缓存更新策略+缓存穿透（互斥锁）实现" />
+    <option name="LAST_COMMIT_MESSAGE" value="缓存更新策略+缓存穿透（互斥锁）实现" />
   </component>
 </project>
