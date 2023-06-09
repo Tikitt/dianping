@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a9a535ed-a574-4282-b674-9d3c6d380837" name="Changes" comment="缓存更新策略+缓存穿透（互斥锁）实现">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/st/entity/RedisData.java" afterDir="false" />
+    <list default="true" id="a9a535ed-a574-4282-b674-9d3c6d380837" name="Changes" comment="逻辑过期解决缓存穿透问题">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/st/utils/CacheClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/st/utils/RedisIdWorker.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/st/service/impl/ShopServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/st/service/impl/ShopServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/st/HmDianPingApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/st/HmDianPingApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/st/service/impl/ShopServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/st/service/impl/ShopServiceImpl.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,24 +47,40 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "F:/stStudy/JavaProjects/dianping",
-    "settings.editor.selected.configurable": "MavenSettings",
-    "spring.configuration.checksum": "4389a84bcc0f18bc760150e6e378da4a",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;F:/stStudy/JavaProjects/dianping&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;4389a84bcc0f18bc760150e6e378da4a&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="Spring Boot.HmDianPingApplication">
+}</component>
+  <component name="RunManager" selected="JUnit.HmDianPingApplicationTests.testIdWorker">
+    <configuration name="HmDianPingApplicationTests.testIdWorker" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="hm-dianping" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.st.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.st" />
+      <option name="MAIN_CLASS_NAME" value="com.st.HmDianPingApplicationTests" />
+      <option name="METHOD_NAME" value="testIdWorker" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="HmDianPingApplicationTests.testSaveShop" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="hm-dianping" />
       <extension name="coverage">
@@ -91,6 +106,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.HmDianPingApplicationTests.testIdWorker" />
         <item itemvalue="JUnit.HmDianPingApplicationTests.testSaveShop" />
       </list>
     </recent_temporary>
@@ -104,7 +120,8 @@
       <option name="presentableId" value="Default" />
       <updated>1685697333971</updated>
       <workItem from="1685697335950" duration="1227000" />
-      <workItem from="1685698593473" duration="11357000" />
+      <workItem from="1685698593473" duration="13950000" />
+      <workItem from="1686051952074" duration="2050000" />
     </task>
     <task id="LOCAL-00001" summary="黑马点评初始代码">
       <created>1685698672040</created>
@@ -120,7 +137,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685951318673</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="逻辑过期解决缓存穿透问题">
+      <created>1685954512285</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1685954512285</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -140,6 +164,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="黑马点评初始代码" />
     <MESSAGE value="缓存更新策略+缓存穿透（互斥锁）实现" />
-    <option name="LAST_COMMIT_MESSAGE" value="缓存更新策略+缓存穿透（互斥锁）实现" />
+    <MESSAGE value="逻辑过期解决缓存穿透问题" />
+    <option name="LAST_COMMIT_MESSAGE" value="逻辑过期解决缓存穿透问题" />
   </component>
 </project>
