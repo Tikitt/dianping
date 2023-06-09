@@ -4,11 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a9a535ed-a574-4282-b674-9d3c6d380837" name="Changes" comment="逻辑过期解决缓存穿透问题">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/st/utils/CacheClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/st/utils/RedisIdWorker.java" afterDir="false" />
+    <list default="true" id="a9a535ed-a574-4282-b674-9d3c6d380837" name="Changes" comment="优惠券秒杀实现">
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/st/HmDianPingApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/st/HmDianPingApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/st/HmDianPingApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/st/HmDianPingApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/st/controller/VoucherOrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/st/controller/VoucherOrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/st/service/IVoucherOrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/st/service/IVoucherOrderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/st/service/impl/VoucherOrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/st/service/impl/VoucherOrderServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/st/HmDianPingApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/st/HmDianPingApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/st/controller/VoucherOrderController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/st/controller/VoucherOrderController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/st/service/IVoucherOrderService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/st/service/IVoucherOrderService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/st/service/impl/VoucherOrderServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/st/service/impl/VoucherOrderServiceImpl.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +63,6 @@
     &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;last_opened_file_path&quot;: &quot;F:/stStudy/JavaProjects/dianping&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,
@@ -64,7 +70,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="JUnit.HmDianPingApplicationTests.testIdWorker">
+  <component name="RunManager" selected="Spring Boot.HmDianPingApplication">
     <configuration name="HmDianPingApplicationTests.testIdWorker" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="hm-dianping" />
       <extension name="coverage">
@@ -98,12 +104,28 @@
       </method>
     </configuration>
     <configuration name="HmDianPingApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <option name="ACTIVE_PROFILES" />
       <module name="hm-dianping" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.st.HmDianPingApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="HmDianPingApplication2" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <option name="ACTIVE_PROFILES" />
+      <module name="hm-dianping" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.st.HmDianPingApplication" />
+      <option name="VM_PARAMETERS" value="-Dserver.port=8082" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="JUnit.HmDianPingApplicationTests.testIdWorker" />
+      <item itemvalue="JUnit.HmDianPingApplicationTests.testSaveShop" />
+      <item itemvalue="Spring Boot.HmDianPingApplication" />
+      <item itemvalue="Spring Boot.HmDianPingApplication2" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.HmDianPingApplicationTests.testIdWorker" />
@@ -121,7 +143,9 @@
       <updated>1685697333971</updated>
       <workItem from="1685697335950" duration="1227000" />
       <workItem from="1685698593473" duration="13950000" />
-      <workItem from="1686051952074" duration="2050000" />
+      <workItem from="1686051952074" duration="5281000" />
+      <workItem from="1686307852649" duration="92000" />
+      <workItem from="1686308241992" duration="40000" />
     </task>
     <task id="LOCAL-00001" summary="黑马点评初始代码">
       <created>1685698672040</created>
@@ -144,7 +168,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685954512285</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="全局唯一ID实现">
+      <created>1686300020898</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1686300020898</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -165,6 +196,8 @@
     <MESSAGE value="黑马点评初始代码" />
     <MESSAGE value="缓存更新策略+缓存穿透（互斥锁）实现" />
     <MESSAGE value="逻辑过期解决缓存穿透问题" />
-    <option name="LAST_COMMIT_MESSAGE" value="逻辑过期解决缓存穿透问题" />
+    <MESSAGE value="全局唯一ID实现" />
+    <MESSAGE value="优惠券秒杀实现" />
+    <option name="LAST_COMMIT_MESSAGE" value="优惠券秒杀实现" />
   </component>
 </project>
